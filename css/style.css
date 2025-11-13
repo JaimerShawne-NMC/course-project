@@ -1,29 +1,31 @@
 @charset "utf-8";
 
+html {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 body {
     margin: 0;
 }
 
-/* Main */
 .grid-container {
     display: grid;
     grid-template-areas:
-        "header header"
+        ".header .header"
         ".main-nav .main-nav"
         ".content .content"
         ".footer .footer";
-    outline: 1px solid #000000;
 }
 
 header .top-banner, .content, .footer {
     padding: 20px;
     text-align: center;
-    border: 1px solid #000000;
 }
 
+/* Header */
 .main-nav {
-    padding: 10px;
-    border: 1px solid #000000;
+    padding: 15px 5px;
+    background-color: rgb(220, 47, 47);
 }
 
 .main-nav ul {
@@ -32,6 +34,48 @@ header .top-banner, .content, .footer {
     justify-content: space-around;
     padding: 0;
     margin: 0;
+}
+
+.main-nav ul li a {
+    color: white;
+}
+
+/* Content */
+.home-content1, .home-content2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.home-content1 {
+    background-image:  url(/images/background_campus_scaled.jpg);
+    background-size: cover;
+    background-position: center top;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+
+/* Contact Form */
+.contact-us {
+    padding: 50px;
+}
+
+.contact-form-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form {
+    padding: 20px;
+    border: 1px solid black;
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(220, 47, 47);
+    padding: 30px;
 }
 
 .footer-sub {
@@ -44,4 +88,8 @@ header .top-banner, .content, .footer {
     list-style: none;
     text-align: left;
     line-height: 25px;
+}
+
+.footer-rmc h3, .footer ul li a, .footer p {
+    color: white;
 }
