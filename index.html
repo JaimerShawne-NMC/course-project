@@ -19,6 +19,10 @@
     A server url with the code running on it (use infinity free in a directory called "course-project").  Be sure to set your sftp.json file to do this correctly.  You MUST NOT OVERWRITE previous assignments!
     So far this should be fairly easy for everyone to get done. After you submit it, I will review your sites and give you advice on things you might and should consider. 
     -->
+
+    <!-- 
+    Must add audio and video (with poster)
+    -->
 </head>
 
 <body>
@@ -26,15 +30,32 @@
         <div class="header">
             <header>
                 <div class="top-banner">
-                    <h1>RateMyCampus</h1>
+                    <a href="/">
+                        <div class="rmc-logo-top">
+                            <img class="rmc-logo" src="images/ratemycampus-logo_transparent.png"
+                                alt="RateMyCampus Logo">
+                            <h1>RateMyCampus</h1>
+                        </div>
+                    </a>
+                    <div class="sign-up">
+                        <a href="sign-up.html">Sign Up</a>
+                        <hr>
+                        <a href="sign-up.html">Log In</a>
+                    </div>
                 </div>
                 <nav class="main-nav">
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="locations.html">Locations</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                    <a class="class-current" href="/">
+                        <div>Home</div>
+                    </a>
+                    <a href="locations.html">
+                        <div>Locations</div>
+                    </a>
+                    <a href="about.html">
+                        <div>About</div>
+                    </a>
+                    <a href="contact.html">
+                        <div>Contact</div>
+                    </a>
                 </nav>
             </header>
         </div>
@@ -48,20 +69,29 @@
         </div>
         <div class="content home-content2">
             <aside>
-                <h2>Extra Content</h2>
+                <h2>Got a spot? <a href="locations.html">Give it a rating!</a></h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus iure sit facere rerum consectetur
                     nam sunt, delectus magnam odio eligendi possimus perspiciatis eum nulla ullam impedit enim beatae
                     fugit saepe?</p>
             </aside>
         </div>
+        <div class="content">
+            <h2>What's New at NMC?</h2>
+            <iframe src="https://www.youtube.com/embed/Ca8Q3HQguEM?si=VdugitIyq6ra8kYq" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
         <div class="footer">
             <footer>
                 <div class="footer-sub">
-                    <div class="footer-rmc">
-                        <!-- Have a logo here or... -->
-                        <h3>RateMyCampus</h3>
-                        <!-- Have a slogan here -->
-                    </div>
+                    <a href="/">
+                        <div class="footer-rmc">
+                            <img class="rmc-logo" src="images/ratemycampus-logo_transparent.png"
+                                alt="RateMyCampus Logo">
+                            <h3>RateMyCampus</h3>
+                        </div>
+                    </a>
                     <nav class="footer-nav">
                         <ul>
                             <li><a href="/">Home</a></li>

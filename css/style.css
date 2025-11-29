@@ -1,7 +1,14 @@
 @charset "utf-8";
 
+
+
+/* Misc. */
 html {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html a {
+    text-decoration: none;
 }
 
 body {
@@ -22,43 +29,168 @@ header .top-banner, .content, .footer {
     text-align: center;
 }
 
-/* Header */
-.main-nav {
-    padding: 15px 5px;
-    background-color: rgb(220, 47, 47);
+.rmc-logo {
+    width: 100px;
 }
 
-.main-nav ul {
-    list-style: none;
+/* .redirect-button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+} */
+/* I cannot, for the life of me, remember what this is for */
+
+
+
+/* Header */
+.top-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+}
+
+.top-banner a {
+    text-decoration: none;
+    color: rgba(19, 51, 77);
+}
+
+.rmc-logo-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up a {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-nav {
+    background-color: rgba(220, 47, 47, 1);
     display: flex;
     justify-content: space-around;
     padding: 0;
     margin: 0;
 }
 
-.main-nav ul li a {
+.main-nav a {
     color: white;
+    text-decoration: none;
+    flex-grow: 1;
 }
 
-/* Content */
+.main-nav a div {
+    padding: 15px;
+    text-align: center;
+}
+
+.main-nav a div:hover, .class-current, .locations-current, .about-current, .contact-current {
+    transition: background-color 0.25s;
+    background-color: rgba(19, 51, 77);
+}
+
+.main-nav a div:active {
+    font-weight: bold;
+}
+
+/* Home Page */
 .home-content1, .home-content2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 300px;
+    min-height: 350px;
+}
+
+.content h2 a, .home-content1, .home-content2 {
+    color: white;
+    text-decoration: none;
 }
 
 .home-content1 {
-    background-image:  url(/images/background_campus_scaled.jpg);
+    background-image: url(/images/campus_background_scaled.jpg);
     background-size: cover;
     background-position: center top;
-    color: white;
+    text-shadow: 0 0 10px black;
+    margin: -50px 0 0;
+    padding: 50px 20px;
+    z-index: -1
+}
+
+.home-content2 {
+    background-image: url(/images/library_background_scaled.jpg);
+    background-size: cover;
+    background-position: center;
     text-shadow: 0 0 10px black;
 }
 
-/* Contact Form */
+.content h2 {
+    font-size: 40px;
+}
+
+.content h2 a:hover {
+    text-decoration: underline;
+}
+
+.content p {
+    font-size: 20px;
+}
+
+/* Locations Page */
+.location-tab-list {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.location-tab-container {
+    max-width: 1200px;
+    padding: 0 30px;
+}
+
+.location-tab-sub-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.location-tab {
+    border: 1px solid gray;
+    border-radius: 10px;
+    max-width: 300px;
+    padding: 0;
+    margin: 0;
+}
+
+.location-tab img {
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    border: 1px solid gray;
+    border-radius: 10px 10px 0 0;
+    clip-path: border-box;
+}
+
+.location-tab h4 {
+    font-size: 25px;
+    margin: 20px 0 10px;
+}
+
+.location-tab p {
+    font-size: 15px;
+    padding: 0 15px;
+    margin: 10px 0 20px;
+}
+
+/* Contact {age */
 .contact-us {
-    padding: 50px;
+    padding: 30px 30px 75px;
+}
+
+.contact-us h1 {
+    text-align: center;
+    font-size: 40px;
 }
 
 .contact-form-div {
@@ -69,6 +201,40 @@ header .top-banner, .content, .footer {
 
 .contact-form {
     padding: 20px;
+    border: 2px solid black;
+    min-width: 225px;
+    max-width: 500px;
+    width: 100%
+}
+
+.contact-form label {
+    font-size: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: text;
+    resize: none;
+}
+
+.contact-form input[type="submit"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.contact-form input[placeholder], .contact-form textarea[placeholder], .contact-form input[type="submit"] {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+
+.contact-form, input, textarea {
+    border-radius: 10px;
+}
+
+.contact-form input, .contact-form textarea {
     border: 1px solid black;
 }
 
@@ -81,6 +247,7 @@ header .top-banner, .content, .footer {
 .footer-sub {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 50px;
 }
 
@@ -92,4 +259,57 @@ header .top-banner, .content, .footer {
 
 .footer-rmc h3, .footer ul li a, .footer p {
     color: white;
+}
+
+.footer-rmc h3 {
+    margin: 5px 0 0;
+}
+
+.footer hr {
+    margin: 20px 0;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 1080px) {
+    /* Locations Page */
+    .location-tab-sub-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 720px) {
+    /* Header */
+    .top-banner a img {
+        width: 75px;
+    }
+
+    .top-banner h1 {
+        font-size: 28px;
+    }
+
+    /* Locations Page */
+    .location-tab-sub-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header */
+    .top-banner a img {
+        width: 50px;
+    }
+
+    .top-banner a h1 {
+        display: none;
+    }
+
+    .sign-up a {
+        font-size: 18px;
+    }
 }

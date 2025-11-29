@@ -13,32 +13,51 @@
         <div class="header">
             <header>
                 <div class="top-banner">
-                    <h1>RateMyCampus</h1>
+                    <div class="rmc-logo-top">
+                        <a href="/">
+                            <img class="rmc-logo" src="images/ratemycampus-logo_transparent.png"
+                                alt="RateMyCampus Logo">
+                        </a>
+                        <a href="/">
+                            <h1>RateMyCampus</h1>
+                        </a>
+                    </div>
+                    <div class="sign-up">
+                        <a href="sign-up.html">Sign Up</a>
+                    </div>
                 </div>
                 <nav class="main-nav">
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="locations.html">Locations</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                    <a href="/">
+                        <div>Home</div>
+                    </a>
+                    <a href="locations.html">
+                        <div>Locations</div>
+                    </a>
+                    <a href="about.html">
+                        <div>About</div>
+                    </a>
+                    <a class="contact-current" href="contact.html">
+                        <div>Contact</div>
+                    </a>
                 </nav>
             </header>
         </div>
         <div class="contact-us">
+            <h1>Contact Us</h1>
             <div class="contact-form-div">
                 <form class="contact-form" action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post">
-                    <label for="full-name">Full Name:</label><br>
-                    <input type="text" id="full-name" name="full-name" required><br>
+                    <label for="full-name"><b></b>Full Name:</label><br>
+                    <input type="text" id="full-name" name="full-name" placeholder="John R. Smith IV" required><br>
 
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required><br>
 
-                    <label for="phone">Phone:</label><br>
-                    <input type="tel" id="phone" name="phone" required><br>
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="1-555-555-1234" required><br>
 
                     <label for="message">Message:</label><br>
-                    <textarea id="message" required></textarea>
+                    <textarea id="message" name="message" rows="5" maxlength="300" placeholder="Leave a message. (300 character limit)"
+                        required></textarea><br>
 
                     <br>
                     <input type="submit">
@@ -49,7 +68,7 @@
             <footer>
                 <div class="footer-sub">
                     <div class="footer-rmc">
-                        <!-- Have a logo here or... -->
+                        <img class="rmc-logo" src="images/ratemycampus-logo_transparent.png" alt="RateMyCampus Logo">
                         <h3>RateMyCampus</h3>
                         <!-- Have a slogan here -->
                     </div>
@@ -63,7 +82,7 @@
                     </nav>
                 </div>
                 <hr>
-                <p>&copy; 2025 RateMyCampus. All rights reserved.</p>
+                <p>&copy; 2025 RateMyCampus.&nbsp;All rights reserved.</p>
             </footer>
         </div>
     </div>
