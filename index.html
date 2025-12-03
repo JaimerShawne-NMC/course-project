@@ -5,24 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RateMyCampus</title>
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- 
-    Review 1:
-    For this assignment, I want to see some of the progress you are making towards your final project. Deliverables for this assignment include:
-
-    github repository - you will submit a working link to this.
-    at least two html files (one is your index.html the second is a secondary page). Your site will need to eventually contain much more.
-    A working navigation menu that connects the two html files
-    A basic web layout.
-    1 css file that shows you have started the process.
-    A server url with the code running on it (use infinity free in a directory called "course-project").  Be sure to set your sftp.json file to do this correctly.  You MUST NOT OVERWRITE previous assignments!
-    So far this should be fairly easy for everyone to get done. After you submit it, I will review your sites and give you advice on things you might and should consider. 
-    -->
-
-    <!-- 
-    Must add audio and video (with poster)
-    -->
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -32,62 +15,79 @@
                 <div class="top-banner">
                     <a href="/">
                         <div class="rmc-logo-top">
-                            <img class="rmc-logo" src="images/ratemycampus-logo_transparent.png"
+                            <img class="rmc-logo" src="/images/ratemycampus-logo_transparent.png"
                                 alt="RateMyCampus Logo">
                             <h1>RateMyCampus</h1>
                         </div>
                     </a>
-                    <div class="sign-up">
-                        <a href="sign-up.html">Sign Up</a>
-                        <hr>
-                        <a href="sign-up.html">Log In</a>
+                    <div class="account-redirects">
+                        <a class="log-in-button" href="/log-in.html">Log In</a>
+                        <a class="sign-up-button" href="/sign-up.html">Sign Up</a>
                     </div>
                 </div>
                 <nav class="main-nav">
                     <a class="class-current" href="/">
                         <div>Home</div>
                     </a>
-                    <a href="locations.html">
+                    <a href="/locations.html">
                         <div>Locations</div>
                     </a>
-                    <a href="about.html">
+                    <a href="/about.html">
                         <div>About</div>
                     </a>
-                    <a href="contact.html">
+                    <a href="/contact.html">
                         <div>Contact</div>
                     </a>
                 </nav>
             </header>
         </div>
-        <div class="content home-content1">
-            <main>
-                <h2>Welcome to RateMyCampus!</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus eaque amet deserunt reprehenderit
-                    voluptates quos qui ducimus culpa esse accusantium a quia fuga sit quod nam sunt, tempore
-                    cupiditate. Porro?</p>
-            </main>
-        </div>
-        <div class="content home-content2">
-            <aside>
-                <h2>Got a spot? <a href="locations.html">Give it a rating!</a></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus iure sit facere rerum consectetur
-                    nam sunt, delectus magnam odio eligendi possimus perspiciatis eum nulla ullam impedit enim beatae
-                    fugit saepe?</p>
-            </aside>
+        <div class="content landing">
+            <div class="content-sub home-content1">
+                <aside>
+                    <h2>Welcome to RateMyCampus!</h2>
+                </aside>
+            </div>
         </div>
         <div class="content">
-            <h2>What's New at NMC?</h2>
-            <iframe src="https://www.youtube.com/embed/Ca8Q3HQguEM?si=VdugitIyq6ra8kYq" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="content-sub home-content2">
+                <aside>
+                    <h2>Know a spot? <a href="/locations.html">Share your story!</a></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus iure sit facere rerum
+                        consectetur
+                        nam sunt, delectus magnam odio eligendi possimus perspiciatis eum nulla ullam impedit enim
+                        beatae
+                        fugit saepe?</p>
+                </aside>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-sub home-content3">
+                <aside class="nmc-video-container">
+                    <div class="nmc-video-side">
+                        <h2>What's New at NMC?</h2>
+                        <p>On Oct. 18, 2018, one of the strongest storms in history destroyed nearly all of Northern
+                            Marianas College and the Northern Mariana Islands. Seven years later, the College cuts the
+                            ribbon on the first of five new buildings.<br>
+                            <br>
+                            This mini documentary is dedicated to each and every individual, company, and agency whose
+                            contribution and support have made the ribbon cutting possible and who continue to fuel
+                            NMC's
+                            recovery efforts.
+                        </p>
+                    </div>
+                    <iframe class="nmc-video" src="https://www.youtube.com/embed/Ca8Q3HQguEM?si=VdugitIyq6ra8kYq"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </aside>
+            </div>
         </div>
         <div class="footer">
             <footer>
                 <div class="footer-sub">
                     <a href="/">
                         <div class="footer-rmc">
-                            <img class="rmc-logo" src="images/ratemycampus-logo_transparent.png"
+                            <img class="rmc-logo" src="/images/ratemycampus-logo_transparent.png"
                                 alt="RateMyCampus Logo">
                             <h3>RateMyCampus</h3>
                         </div>
@@ -95,9 +95,9 @@
                     <nav class="footer-nav">
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="locations.html">Locations</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="/locations.html">Locations</a></li>
+                            <li><a href="/about.html">About</a></li>
+                            <li><a href="/contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>

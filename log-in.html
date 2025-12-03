@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Log In</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -35,28 +35,21 @@
                     <a href="/about.html">
                         <div>About</div>
                     </a>
-                    <a class="contact-current" href="/contact.html">
+                    <a href="/contact.html">
                         <div>Contact</div>
                     </a>
                 </nav>
             </header>
         </div>
-        <div class="contact-content">
-            <h1>Contact Us</h1>
-            <div class="contact-form-container">
-                <form class="contact-form" id="contact-form" name="contact-form" action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post" target="contact-iframe">
-                    <label for="full-name"><b></b>Full Name:</label><br>
-                    <input type="text" id="full-name" name="full-name" placeholder="John R. Smith IV" required><br>
-
+        <div class="log-in-content">
+            <h1>Log In</h1>
+            <div class="log-in-form-container">
+                <form class="log-in-form" id="log-in-form" name="log-in-form" action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post" target="log-in-iframe">
                     <label for="email">Email Address:</label><br>
-                    <input type="email" id="email" name="email" placeholder="example@mail.com" required><br>
+                    <input type="email" id="account-email" name="account-email" placeholder="example@mail.com" required><br>
 
-                    <label for="phone">Phone Number:</label><br>
-                    <input type="tel" id="phone" name="phone" placeholder="1-555-555-1234" required><br>
-
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" rows="5" maxlength="300"
-                        placeholder="Leave a message or request. (300 character limit)" required></textarea><br>
+                    <label for="password">Password:</label><br>
+                    <input type="account-password" id="account-password" name="account-password" placeholder="" required><br>
 
                     <br>
                     <input type="submit">
@@ -87,7 +80,7 @@
             </footer>
         </div>
     </div>
-    <iframe id="contact-iframe" name="contact-iframe" style="display: none;"></iframe>
+    <iframe id="log-in-iframe" name="log-in-iframe" style="display: none;"></iframe>
 </body>
 
 </html>

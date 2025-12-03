@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RateMyCampus</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -13,54 +13,65 @@
         <div class="header">
             <header>
                 <div class="top-banner">
-                    <div class="rmc-logo-top">
-                        <a href="/">
-                            <img class="rmc-logo" src="images/ratemycampus-logo_transparent.png"
+                    <a href="/">
+                        <div class="rmc-logo-top">
+                            <img class="rmc-logo" src="/images/ratemycampus-logo_transparent.png"
                                 alt="RateMyCampus Logo">
-                        </a>
-                        <a href="/">
                             <h1>RateMyCampus</h1>
-                        </a>
-                    </div>
-                    <div class="sign-up">
-                        <a href="sign-up.html">Sign Up</a>
+                        </div>
+                    </a>
+                    <div class="account-redirects">
+                        <a class="log-in-button" href="/log-in.html">Log In</a>
+                        <a class="sign-up-button" href="/sign-up.html">Sign Up</a>
                     </div>
                 </div>
                 <nav class="main-nav">
                     <a href="/">
                         <div>Home</div>
                     </a>
-                    <a href="locations.html">
+                    <a href="/locations.html">
                         <div>Locations</div>
                     </a>
-                    <a href="about.html">
+                    <a href="/about.html">
                         <div>About</div>
                     </a>
-                    <a href="contact.html">
+                    <a href="/contact.html">
                         <div>Contact</div>
                     </a>
                 </nav>
             </header>
         </div>
         <div class="sign-up-content">
-            a
+            <h1>Sign Up</h1>
+            <div class="sign-up-form-container">
+                <form class="sign-up-form" id="sign-up-form" name="sign-up-form" action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post" target="sign-up-iframe">
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="account-email" name="account-email" placeholder="example@mail.com" required><br>
+
+                    <label for="password">Password:</label><br>
+                    <input type="account-password" id="account-password" name="account-password" placeholder="" required><br>
+
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
         </div>
         <div class="footer">
             <footer>
                 <div class="footer-sub">
-                    <div class="footer-rmc">
-                        <a href="/">
-                            <img class="rmc-logo" src="images/ratemycampus-logo_transparent.png"
+                    <a href="/">
+                        <div class="footer-rmc">
+                            <img class="rmc-logo" src="/images/ratemycampus-logo_transparent.png"
                                 alt="RateMyCampus Logo">
-                        </a>
-                        <h3>RateMyCampus</h3>
-                    </div>
+                            <h3>RateMyCampus</h3>
+                        </div>
+                    </a>
                     <nav class="footer-nav">
                         <ul>
                             <li><a href="/">Home</a></li>
-                            <li><a href="locations.html">Locations</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="/locations.html">Locations</a></li>
+                            <li><a href="/about.html">About</a></li>
+                            <li><a href="/contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -69,6 +80,7 @@
             </footer>
         </div>
     </div>
+    <iframe id="sign-up-iframe" name="sign-up-iframe" style="display: none;"></iframe>
 </body>
 
 </html>

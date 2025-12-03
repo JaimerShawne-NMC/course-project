@@ -1,10 +1,10 @@
 @charset "utf-8";
 
-
-
 /* Misc. */
 html {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    background-color: rgba(220, 47, 47, 1);
 }
 
 html a {
@@ -24,7 +24,9 @@ body {
         ".footer .footer";
 }
 
-header .top-banner, .content, .footer {
+header .top-banner,
+.content,
+.footer {
     padding: 20px;
     text-align: center;
 }
@@ -52,7 +54,6 @@ header .top-banner, .content, .footer {
 }
 
 .top-banner a {
-    text-decoration: none;
     color: rgba(19, 51, 77);
 }
 
@@ -62,9 +63,19 @@ header .top-banner, .content, .footer {
     align-items: center;
 }
 
-.sign-up a {
+.account-redirects a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     font-weight: bold;
+    border: 2px solid rgba(19, 51, 77);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.account-redirects .sign-up-button {
+    color: white;
+    background-color: rgba(19, 51, 77);
+    padding: 10px 20px;
 }
 
 .main-nav {
@@ -86,70 +97,130 @@ header .top-banner, .content, .footer {
     text-align: center;
 }
 
-.main-nav a div:hover, .class-current, .locations-current, .about-current, .contact-current {
+.main-nav a div:hover,
+.class-current,
+.locations-current,
+.about-current,
+.contact-current {
     transition: background-color 0.25s;
     background-color: rgba(19, 51, 77);
 }
 
-.main-nav a div:active {
-    font-weight: bold;
-}
-
-/* Home Page */
-.home-content1, .home-content2 {
+/* Global Elements */
+.content {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 350px;
+    padding: 0;
+    margin: 0;
+    background-color: white;
 }
 
-.content h2 a, .home-content1, .home-content2 {
-    color: white;
+.content * {
+    color: black;
     text-decoration: none;
 }
 
+.content-sub {
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.content-sub aside>*,
+.content-sub section>* {
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.content-sub aside p {
+    font-size: 1.5em;
+}
+
+.content-sub section h2 {
+    font-size: 2.25em;
+}
+
+.content-sub section p {
+    font-size: 1.25em;
+}
+
+/* Home Page */
+
+.home-content1 h2 {
+    font-size: 5em;
+    color: white;
+    text-shadow: 0 0 15px black;
+    padding: 0 20px;
+}
+
+.home-content2 h2,
+.home-content3 h2 {
+    font-size: 3em;
+}
+
+.home-content1,
+.home-content2,
+.home-content3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 250px;
+}
+
+.landing {
+    background-image: url('/images/nmc-proa-union-scaled.jpg');
+    background-size: cover;
+    background-position: top center;
+}
+
 .home-content1 {
-    background-image: url(/images/campus_background_scaled.jpg);
-    background-size: cover;
-    background-position: center top;
-    text-shadow: 0 0 10px black;
-    margin: -50px 0 0;
-    padding: 50px 20px;
-    z-index: -1
+    min-height: 80vh;
 }
 
-.home-content2 {
-    background-image: url(/images/library_background_scaled.jpg);
-    background-size: cover;
-    background-position: center;
-    text-shadow: 0 0 10px black;
-}
 
-.content h2 {
-    font-size: 40px;
-}
-
-.content h2 a:hover {
+.content-sub h2 a:hover {
     text-decoration: underline;
 }
 
-.content p {
-    font-size: 20px;
+.nmc-video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nmc-video-side {
+    padding: 20px;
+    max-width: 50%;
+}
+
+.nmc-video-side h2 {
+    margin: 5px;
+}
+
+.nmc-video {
+    width: 50%;
+    aspect-ratio: 16/9;
+    padding-left: 20px;
 }
 
 /* Locations Page */
-.location-tab-list {
-    display: flex;
-    justify-content: center;
-    padding: 50px 0;
+.location-tab h4 {
+    font-size: 1.5em;
+    margin: 20px 0 0;
+}
+
+.location-tab p {
+    font-size: 1.125em;
+    padding: 10px 15px;
+    margin: 0 0 20px;
 }
 
 .location-tab-container {
-    max-width: 1200px;
-    padding: 0 30px;
+    padding: 50px 30px;
 }
 
-.location-tab-sub-container {
+.location-grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
@@ -159,8 +230,10 @@ header .top-banner, .content, .footer {
     border: 1px solid gray;
     border-radius: 10px;
     max-width: 300px;
+    min-height: 500px;
     padding: 0;
     margin: 0;
+    clip-path: border-box;
 }
 
 .location-tab img {
@@ -169,37 +242,37 @@ header .top-banner, .content, .footer {
     width: 300px;
     border: 1px solid gray;
     border-radius: 10px 10px 0 0;
-    clip-path: border-box;
 }
 
-.location-tab h4 {
-    font-size: 25px;
-    margin: 20px 0 10px;
-}
+/* About Page */
 
-.location-tab p {
-    font-size: 15px;
-    padding: 0 15px;
-    margin: 10px 0 20px;
-}
 
-/* Contact {age */
-.contact-us {
+/* Contact, Log In, and Sign Up Page */
+.contact-content,
+.log-in-content,
+.sign-up-content {
+    background-color: white;
     padding: 30px 30px 75px;
 }
 
-.contact-us h1 {
+.contact-content h1,
+.log-in-content h1,
+.sign-up-content h1 {
     text-align: center;
     font-size: 40px;
 }
 
-.contact-form-div {
+.contact-form-container,
+.log-in-form-container,
+.sign-up-form-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.contact-form {
+.contact-form,
+.log-in-form,
+.sign-up-form {
     padding: 20px;
     border: 2px solid black;
     min-width: 225px;
@@ -207,11 +280,16 @@ header .top-banner, .content, .footer {
     width: 100%
 }
 
-.contact-form label {
+.contact-form label,
+.log-in-form label,
+.sign-up-form label {
     font-size: 20px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea,
+.log-in-form input,
+.sign-up-form input {
     margin: 10px 0;
     padding: 10px;
     width: 100%;
@@ -220,21 +298,36 @@ header .top-banner, .content, .footer {
     resize: none;
 }
 
-.contact-form input[type="submit"] {
+.contact-form input[type="submit"],
+.log-in-form input[type="submit"],
+.sign-up-form input[type="submit"] {
     margin: 0;
     cursor: pointer;
 }
 
-.contact-form input[placeholder], .contact-form textarea[placeholder], .contact-form input[type="submit"] {
+.contact-form input[placeholder],
+.contact-form textarea[placeholder],
+.contact-form input[type="submit"],
+.log-in-form input[placeholder],
+.log-in-form input[type="submit"],
+.sign-up-form input[placeholder],
+.sign-up-form input[type="submit"] {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 15px;
 }
 
-.contact-form, input, textarea {
+.contact-form,
+input,
+textarea,
+.log-in-form,
+.sign-up-form {
     border-radius: 10px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea,
+.log-in-form input,
+.sign-up-form input {
     border: 1px solid black;
 }
 
@@ -257,7 +350,13 @@ header .top-banner, .content, .footer {
     line-height: 25px;
 }
 
-.footer-rmc h3, .footer ul li a, .footer p {
+.footer-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-rmc h3,
+.footer ul li a,
+.footer p {
     color: white;
 }
 
@@ -273,33 +372,73 @@ header .top-banner, .content, .footer {
 
 /* Media Queries */
 @media (max-width: 1080px) {
+
+    /* Global Elements */
+    .content-sub aside p {
+        font-size: 1.25em;
+    }
+
+    /* Home Page */
+    .home-content1 h2 {
+        font-size: 3.25em;
+    }
+
+    .home-content2 h2,
+    .home-content3 h2 {
+        font-size: 2.5em;
+    }
+
+    .nmc-video-container {
+        display: inline;
+    }
+
+    .nmc-video-side {
+        max-width: 100%;
+    }
+
+    .nmc-video {
+        width: 640px;
+        height: auto;
+    }
+
     /* Locations Page */
-    .location-tab-sub-container {
+    .location-grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 30px;
     }
 }
 
 @media (max-width: 720px) {
+
     /* Header */
     .top-banner a img {
         width: 75px;
     }
 
     .top-banner h1 {
-        font-size: 28px;
+        font-size: 26px;
+    }
+
+    .account-redirects a,
+    .account-redirects .sign-up-button {
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    /* Home Page */
+    .nmc-video {
+        width: 90%;
     }
 
     /* Locations Page */
-    .location-tab-sub-container {
+    .location-grid-container {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 30px;
     }
 }
 
 @media (max-width: 480px) {
+
     /* Header */
     .top-banner a img {
         width: 50px;
@@ -309,7 +448,26 @@ header .top-banner, .content, .footer {
         display: none;
     }
 
-    .sign-up a {
-        font-size: 18px;
+    .main-nav a div {
+        padding: 10px;
+    }
+
+    /* Global Elements */
+    .content-sub aside p {
+        font-size: 1.125em;
+    }
+
+    .content p {
+        font-size: 1.125em;
+    }
+
+    /* Home Page */
+    .home-content1 h2 {
+        font-size: 2.25em;
+    }
+
+    .home-content2 h2,
+    .home-content3 h2 {
+        font-size: 1.75em;
     }
 }
