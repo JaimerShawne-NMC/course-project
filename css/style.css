@@ -708,3 +708,15 @@ header .top-banner,
         width: 8px;
     }
 }
+
+@media (max-width: 360px) {
+    html {
+        zoom: 0.8;
+    }
+}
+
+@media (max-width: 300px) {
+    html {
+        zoom: 0.6;
+    }
+}
