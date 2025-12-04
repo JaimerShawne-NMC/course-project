@@ -29,7 +29,7 @@
                     <a href="/">
                         <div>Home</div>
                     </a>
-                    <a href="/locations.html">
+                    <a class="locations-current" href="/locations.html">
                         <div>Locations</div>
                     </a>
                     <a href="/about.html">
@@ -43,7 +43,70 @@
         </div>
         <div class="content">
             <div class="content-sub">
-                
+                <div class="location-container">
+                    <div class="location-img-container">
+                        <img class="location-img" src="/images/mango-terrace_scaled.jpg" alt="Mango Terrace">
+                    </div>
+                    <div class="location-table-container">
+                        <table class="location-table">
+                            <tr>
+                                <th>Name</th>
+                                <td>Mango Terrace</td>
+                            </tr>
+                            <tr>
+                                <th>Rating</th>
+                                <td>#/5</td>
+                            </tr>
+                            <tr>
+                                <th>Reviews</th>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th>Last Update</th>
+                                <td>12/04/2025</td>
+                            </tr>
+                            <tr>
+                                <th>Description</th>
+                                <td>The Mango Terrace is a beautiful patio located on the edge of Buildings N and O.
+                                    It's the perfect space to meet up with your friends or enjoy a nice meal.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="comment-section">
+                    <h2>Leave a Comment</h2>
+                    <form class="comment-form" id="comment-form" name="comment-form"
+                        action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post" target="comment-iframe">
+                        <div class="comment-rating">
+                            <div class="star-radio">
+                                <input type="radio" id="1-star" name="rating" value="1" required><br>
+                                <label for="1-star"><img class="star-icon" src="/images/star.png" alt=""></label>
+                            </div>
+                            <div class="star-radio">
+                                <input type="radio" id="2-star" name="rating" value="2"><br>
+                            <label for="2-star"><img class="star-icon" src="/images/star.png" alt=""><img class="star-icon" src="/images/star.png" alt=""></label>
+                            </div>
+                            <div class="star-radio">
+                                <input type="radio" id="3-star" name="rating" value="3"><br>
+                            <label for="3-star"><img class="star-icon" src="/images/star.png" alt=""><img class="star-icon" src="/images/star.png" alt=""><img class="star-icon" src="/images/star.png" alt=""></label>
+                            </div>
+                            <div class="star-radio">
+                                 <input type="radio" id="4-star" name="rating" value="4"><br>
+                            <label for="4-star"><img class="star-icon" src="/images/star.png" alt=""><img class="star-icon" src="/images/star.png" alt=""><img class="star-icon" src="/images/star.png" alt=""><img class="star-icon" src="/images/star.png" alt=""></label>
+                            </div>
+                            <div class="star-radio">
+                                <input type="radio" id="5-star" name="rating" value="5"><br>
+                            <label for="5-star"><img class="star-icon" src="/images/star.png" alt=""><img class="star-icon" src="/images/star.png" alt=""><img class="star-icon" src="/images/star.png" alt=""><img class="star-icon" src="/images/star.png" alt=""><img class="star-icon" src="/images/star.png" alt=""></label>
+                            </div>
+                        </div><br>
+
+                        <textarea id="comment" name="comment" rows="5" maxlength="300"
+                            placeholder="(300 character limit)" required></textarea><br>
+
+                        <input type="submit">
+                    </form>
+                    <iframe id="comment-iframe" name="comment-iframe" class="comment-iframe"></iframe>
+                </div>
             </div>
         </div>
         <div class="footer">
