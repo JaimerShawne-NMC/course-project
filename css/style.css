@@ -412,10 +412,16 @@ header .top-banner,
 
 .about-content2 ul {
     list-style: none;
+    margin: 5px;
 }
 
 .about-content2 ul li {
     font-size: 1.2em;
+    margin: 3px;
+}
+
+.about-content2 h3 {
+    margin: 5px 0
 }
 
 /* Contact, Log In, and Sign Up Page */
